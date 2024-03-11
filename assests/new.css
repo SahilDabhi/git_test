@@ -1,0 +1,43 @@
+main{
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+} 
+main > * {
+    padding: 10px;
+    flex: 1 100%;
+}
+header{
+    background-color: tomato;
+}
+footer{
+    background-color: lightgreen;
+}
+article{
+    text-align: left;
+    background-color: deepskyblue;
+}
+.aside-1{
+ background-color: yellow;
+}
+.aside-2{
+    background-color: pink;
+}
+
+@media all and (min-width: 800px;){
+    article{
+        flex: 3 0px;
+    }
+    .aside-1{
+        order: 1;
+    }
+    article{
+        order: 2;
+    }
+    .aside-2{
+        order: 3;
+    }
+    footer{
+        order: 4;
+    }
+}
