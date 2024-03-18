@@ -1,9 +1,9 @@
-main{
+.wrapper{
     display: flex;
+    flex-wrap: wrap ;
     flex-flow: row wrap;
-    text-align: center;
 } 
-main > * {
+.wrapper > * {
     padding: 10px;
     flex: 1 100%;
 }
@@ -19,19 +19,21 @@ article{
 }
 .aside-1{
  background-color: yellow;
+ width: 25%;
 }
 .aside-2{
     background-color: pink;
+    width: 25%;
 }
 
-@media all and (min-width: 800px;){
-    article{
-        flex: 3 0px;
+@media all and (min-width: 800px){
+    .wrapper{
+        flex: 2 0px;
     }
     .aside-1{
         order: 1;
     }
-    article{
+    .main{
         order: 2;
     }
     .aside-2{
